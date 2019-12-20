@@ -215,6 +215,11 @@ class ClassName {
 	}
 }
 
+export class ExportedClassName {}
+export default class DefaultExportedClassName {}
+export class ExtendingClassName extends ExtentedClassName {}
+export class ImplementingClassName extends InterfaceClassName {}
+
 
 // variables
 // ---------
@@ -272,6 +277,8 @@ import type * as impFlow07 from "./ExportNamed_Multi"; // impFlow07
 import typeof impFlow08 from "./ExportDefault_Class";
 import typeof {impFlow09 as impFlow10} from "./ExportNamed_Class"; // impFlow10
 import typeof * as impFlow11 from "./ExportNamed_Multi"; // impFlow11
+import interface Interface from './InterfaceDefault_Class';
+import interface { Interface } from './InterfaceNamed_Class';
 
 // exports
 // -------
@@ -283,6 +290,9 @@ export let exp10 = 1, exp11 = 2; // exp10, exp11
 export const exp12 = 1, exp13 = 2; // exp12, exp13
 export var exp14 = 1, exp15 = 2; // exp14, exp15
 export function exp16() {} // exp16
+export type TypeClassName {}
+export interface InterfaceClassName {}
+export default interface InterfaceClassName {}
 
 // default exports
 export default { exp17, exp18, exp19 };
